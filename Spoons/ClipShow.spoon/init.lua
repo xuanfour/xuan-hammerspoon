@@ -378,15 +378,14 @@ end
 function obj:openWithCommand(command)
     if obj.canvas:isShowing() then
         if obj.canvas[4].type == "text" then
-            local fn = "'" .. acquireText() .. "'"
+            local fn = acquireText()
+            -- print("fn=" .. fn)
             f, e = io.open(fn, "r+")
-            if e == nil then
+            if f ~= nil then
                 f:close()
-                local cmd = command .. " " .. fn
-                print("cmd=" .. cmd)
-                os.execute(cmd)
+                os.execute(command .. " " .. fn)
             else
-                print("file not exists")
+                -- print("file not exists")
                 os.execute(command)
             end            
         end
