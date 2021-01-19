@@ -133,7 +133,7 @@
           "Open local file with specific command.",
           ""
         ],
-        "doc" : "Open local file with specific command.\n\nParameters:\n * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/mvim`.",
+        "doc" : "Open local file with specific command.\n\nParameters:\n * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/code`.",
         "notes" : [
 
         ],
@@ -144,7 +144,7 @@
         ],
         "name" : "openWithCommand",
         "parameters" : [
-          " * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/mvim`."
+          " * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/code`."
         ]
       }
     ],
@@ -183,7 +183,7 @@
           "Open local file with specific command.",
           ""
         ],
-        "doc" : "Open local file with specific command.\n\nParameters:\n * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/mvim`.",
+        "doc" : "Open local file with specific command.\n\nParameters:\n * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/code`.",
         "notes" : [
 
         ],
@@ -194,7 +194,7 @@
         ],
         "name" : "openWithCommand",
         "parameters" : [
-          " * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/mvim`."
+          " * command - A string specifying which command to use. The \"command\" is something like this: `\/usr\/local\/bin\/code`."
         ]
       },
       {

@@ -373,21 +373,22 @@ end
 --- Open local file with specific command.
 ---
 --- Parameters:
----  * command - A string specifying which command to use. The "command" is something like this: `/usr/local/bin/mvim`.
+---  * command - A string specifying which command to use. The "command" is something like this: `/usr/local/bin/code`.
 
 function obj:openWithCommand(command)
     if obj.canvas:isShowing() then
         if obj.canvas[4].type == "text" then
-            local urltbl = hs.pasteboard.readURL()
-            if urltbl then
-                if urltbl.filePath then
-                    os.execute(command .. " " .. urltbl.filePath)
-                else
-                    os.execute(command)
-                end
+            local fn = "'" .. acquireText() .. "'"
+            f, e = io.open(fn, "r+")
+            if e == nil then
+                f:close()
+                local cmd = command .. " " .. fn
+                print("cmd=" .. cmd)
+                os.execute(cmd)
             else
+                print("file not exists")
                 os.execute(command)
-            end
+            end            
         end
     end
 end

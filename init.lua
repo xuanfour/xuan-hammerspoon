@@ -2,7 +2,7 @@
 
 -- author: zuorn
 -- mail: zuorn@qq.com
--- github: https://github.com/zuorn/hammerspoon_config 
+-- github: https://github.com/zuorn/hammerspoon_config
 
 ----------------------------------------------------------------------------------------------------
 
@@ -183,8 +183,9 @@ if spoon.ClipShow then
         spoon.ClipShow:toggleShow()
         spoon.ModalMgr:deactivate({"clipshowM"})
     end)
-    cmodal:bind('', 'L', '用 Sublime Text 打开', function()
-        spoon.ClipShow:openWithCommand("/usr/local/bin/subl")
+    -- 修改文本编辑器，原文件备份
+    cmodal:bind('', 'C', '用 Visual Studio Code 打开', function()
+        spoon.ClipShow:openWithCommand("/usr/local/bin/code")
         spoon.ClipShow:toggleShow()
         spoon.ModalMgr:deactivate({"clipshowM"})
     end)
@@ -400,7 +401,7 @@ end
 
 
 ----------------------------------------------------------------------------------------------------
--- Hammerspoon 搜索 
+-- Hammerspoon 搜索
 ----------------------------------------------------------------------------------------------------
 if spoon.HSearch then
     hsearch_keys = hsearch_keys or {"alt", "G"}
